@@ -1,4 +1,4 @@
-def smart_calculator():
+def aisha():
     print("Smart Calculator")
 
     x = float(input("Enter first number: "))
@@ -26,4 +26,42 @@ def smart_calculator():
     else:
         print("Invalid choice")
 
-smart_calculator()
+import random
+
+def shanzeh():
+    number = random.randint(1, 50)
+    attempts = 0
+    print("\nGuess the number between 1 and 50!")
+
+    guess = 0
+    while guess != number:
+        guess = int(input("Your guess: "))
+        attempts += 1
+
+        if guess < number:
+            print("Too low")
+        elif guess > number:
+            print("Too high")
+
+    print("Correct! You guessed it in", attempts, "tries.")
+
+def main():
+    print("MAIN MENU")
+    print("1. Smart Calculator")
+    print("2. Guessing Game")
+
+    choice = input("Choose an option (1 or 2): ")
+
+    if choice == "1":
+        aisha()
+    elif choice == "2":
+        play = "yes"
+        while play.lower() == "yes":
+            shanzeh()
+            play = input("Play again? (yes/no): ")
+    else:
+        print("Invalid choice")
+
+
+
+main()
